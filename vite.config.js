@@ -7,20 +7,18 @@ export default defineConfig({
     react(),
     WindiCSS(),
   ],
+  base: '/',
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks: undefined,
-        format: 'es'
+        format: 'es',
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
       }
-    },
-    base: './',
-    assetsDir: 'assets',
-    emptyOutDir: true
-  },
-  server: {
-    headers: {
-      'Content-Type': 'application/javascript'
     }
   }
 })
