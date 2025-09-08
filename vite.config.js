@@ -13,7 +13,10 @@ export default defineConfig({
         manualChunks: undefined,
         format: 'es'
       }
-    }
+    },
+    base: './',
+    assetsDir: 'assets',
+    emptyOutDir: true
   },
   server: {
     headers: {
