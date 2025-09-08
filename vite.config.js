@@ -8,8 +8,7 @@ export default defineConfig({
     WindiCSS(),
   ],
   server: {
-    headers: {
-      'Content-Type': 'text/javascript'
-    }
+    port: 3000,
+    open: true
   }
 })
