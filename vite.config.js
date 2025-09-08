@@ -7,15 +7,16 @@ export default defineConfig({
     react(),
     WindiCSS(),
   ],
-  server: {
-    port: 3000,
-    open: true
-  },
   build: {
     rollupOptions: {
       output: {
         manualChunks: undefined
       }
+    }
+  },
+  server: {
+    headers: {
+      'Content-Type': 'application/javascript'
     }
   }
 })
