@@ -1,7 +1,14 @@
-export default {
-	darkMode: 'class',
+module.exports = {
+  darkMode: 'class',
   extract: {
     include: ['./index.html', 'src/**/*.{vue,html,jsx,tsx}'],
     exclude: ['node_modules', '.git'],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        format: 'es',
+      },
+    },
   },
 }
